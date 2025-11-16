@@ -6,100 +6,110 @@
     <title>TR-103 Training Report</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f7ff;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://cdn.pixabay.com/photo/2017/08/30/02/18/artificial-intelligence-2699520_1280.jpg")
+                no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-        }
+/* Glass effect container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.78);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    position: relative;
+}
 
-        .logo img {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-        }
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
 
-        h1 {
-            font-size: 2.2rem;
-            color: #2563eb;
-            margin-bottom: 8px;
-        }
+h1 {
+    font-size: 2.2rem;
+    color: #1f4ead;
+    margin-bottom: 8px;
+}
 
-        .student-info {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
+.student-info {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
 
-        .training {
-            font-size: 1.6rem;
-            color: #1d4ed8;
-            font-weight: bold;
-            margin: 25px 0 30px;
-        }
+.training {
+    font-size: 1.6rem;
+    color: #0b3d91;
+    font-weight: bold;
+    margin: 25px 0 30px;
+}
 
-        .days-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 12px;
-            margin: 25px 0;
-        }
+/* Grid styling */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+    margin: 25px 0;
+}
 
-        .day-link {
-            display: block;
-            padding: 12px;
-            background-color: #dbeafe;
-            color: #1e40af;
-            font-weight: bold;
-            border: 2px solid #bfdbfe;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.2s, color 0.2s;
-        }
+.day-link {
+    display: block;
+    padding: 12px;
+    background-color: rgba(173, 210, 255, 0.85);
+    color: #0b2f66;
+    font-weight: bold;
+    border: 2px solid rgba(150, 200, 255, 0.9);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s;
+}
 
-        .day-link:hover {
-            background-color: #3b82f6;
-            color: white;
-        }
+.day-link:hover {
+    background-color: #1f6feb;
+    color: white;
+}
 
-        .project-link {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 28px;
-            background-color: #10b981;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.2s;
-        }
+/* Project button */
+.project-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: #0ca678;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.25s;
+}
 
-        .project-link:hover {
-            background-color: #059669;
-        }
+.project-link:hover {
+    background-color: #099268;
+}
 
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            h1 { font-size: 1.8rem; }
-            .training { font-size: 1.4rem; }
-            .days-grid { grid-template-columns: repeat(3, 1fr); }
-        }
+@media (max-width: 600px) {
+    .container { padding: 20px; }
+    h1 { font-size: 1.8rem; }
+    .training { font-size: 1.4rem; }
+    .days-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
     </style>
 </head>
 <body>
