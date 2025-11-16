@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>TR-103 Training Report</title>
+
     <style>
         * {
             margin: 0;
@@ -55,23 +56,24 @@
 
         .days-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 12px;
             margin: 25px 0;
         }
 
-        .day-btn {
+        .day-link {
+            display: block;
             padding: 12px;
             background-color: #dbeafe;
             color: #1e40af;
             font-weight: bold;
             border: 2px solid #bfdbfe;
             border-radius: 8px;
-            cursor: pointer;
+            text-decoration: none;
             transition: background-color 0.2s, color 0.2s;
         }
 
-        .day-btn:hover {
+        .day-link:hover {
             background-color: #3b82f6;
             color: white;
         }
@@ -92,153 +94,70 @@
             background-color: #059669;
         }
 
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background: white;
-            width: 90%;
-            max-width: 800px;
-            height: 80vh;
-            border-radius: 10px;
-            position: relative;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #dc2626;
-            cursor: pointer;
-            z-index: 10;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fee2e2;
-            border-radius: 50%;
-        }
-
-        .close-btn:hover {
-            background: #dc2626;
-            color: white;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Responsive */
         @media (max-width: 600px) {
             .container { padding: 20px; }
             h1 { font-size: 1.8rem; }
             .training { font-size: 1.4rem; }
             .days-grid { grid-template-columns: repeat(3, 1fr); }
-            .modal-content { height: 70vh; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo">
-            <a href="https://www.gndec.ac.in" target="_blank">
-                <img src="https://srijansingh9.github.io/Training-102-Report/gndecLogo.png" alt="GNDEC">
-            </a>
-        </div>
+<div class="container">
 
-        <h1>Training TR-103 Report</h1>
-        <p class="student-info">
-            By <strong>Aashima</strong> • URN: 2203389<br>
-            Guru Nanak Dev Engineering College, Ludhiana
-        </p>
-
-        <div class="training">4 Weeks in Machine Learning</div>
-
-        <div class="days-grid">
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 1.pdf">Day 1</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 2.pdf">Day 2</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 3.pdf">Day 3</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 4.pdf">Day 4</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 5.pdf">Day 5</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 6.pdf">Day 6</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 7.pdf">Day 7</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 8.pdf">Day 8</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 9.pdf">Day 9</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 10.pdf">Day 10</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 11.pdf">Day 11</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 12.pdf">Day 12</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 13 (1).pdf">Day 13</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 14 (1).pdf">Day 14</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 15 (1).pdf">Day 15</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 16.pdf">Day 16</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 17.pdf">Day 17</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 18.pdf">Day 18</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 19.pdf">Day 19</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 20.pdf">Day 20</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 21.pdf">Day 21</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 22.pdf">Day 22</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 23.pdf">Day 23</div>
-            <div class="day-btn" data-pdf="https://Aashima593.github.io/Training-TR-103-report/DAY 24.pdf">Day 24</div>
-        </div>
-
-        <a href="https://Aashima593.github.io/Training-TR-103-report/PROJECT.html" target="_blank" class="project-link">
-            View Final Project
+    <div class="logo">
+        <a href="https://www.gndec.ac.in" target="_blank">
+            <img src="https://srijansingh9.github.io/Training-102-Report/gndecLogo.png" alt="GNDEC">
         </a>
     </div>
 
-    <!-- Modal -->
-    <div id="pdfModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">X</span>
-            <iframe id="pdfViewer" src=""></iframe>
-        </div>
+    <h1>Training TR-103 Report</h1>
+
+    <p class="student-info">
+        By <strong>Aashima</strong> • URN: 2203389<br>
+        Guru Nanak Dev Engineering College, Ludhiana
+    </p>
+
+    <div class="training">Machine Learning</div>
+
+    <div class="days-grid">
+
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day1.ipynb" target="_blank">Day 1</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day2.ipynb" target="_blank">Day 2</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day3.ipynb" target="_blank">Day 3</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day4.ipynb" target="_blank">Day 4</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day5.ipynb" target="_blank">Day 5</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day6.ipynb" target="_blank">Day 6</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day7.ipynb" target="_blank">Day 7</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day8.ipynb" target="_blank">Day 8</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day9.ipynb" target="_blank">Day 9</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day10.ipynb" target="_blank">Day 10</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day11.ipynb" target="_blank">Day 11</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day12.ipynb" target="_blank">Day 12</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day13.ipynb" target="_blank">Day 13</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day14.ipynb" target="_blank">Day 14</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day15.ipynb" target="_blank">Day 15</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day16.ipynb" target="_blank">Day 16</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day17.ipynb" target="_blank">Day 17</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day18.ipynb" target="_blank">Day 18</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day19.ipynb" target="_blank">Day 19</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day20.ipynb" target="_blank">Day 20</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day21.ipynb" target="_blank">Day 21</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day22.ipynb" target="_blank">Day 22</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day23.ipynb" target="_blank">Day 23</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day24.ipynb" target="_blank">Day 24</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day25.ipynb" target="_blank">Day 25</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day26.ipynb" target="_blank">Day 26</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day27.ipynb" target="_blank">Day 27</a>
+        <a class="day-link" href="https://github.com/Aashima593/Training-TR-103-Report/blob/main/Day28.ipynb" target="_blank">Day 28</a>
     </div>
 
-    <script>
-        const modal = document.getElementById('pdfModal');
-        const iframe = document.getElementById('pdfViewer');
-        const closeBtn = document.querySelector('.close-btn');
-        const dayBtns = document.querySelectorAll('.day-btn[data-pdf]');
+    <a href="https://Aashima593.github.io/Training-TR-103-report/PROJECT.html" target="_blank" class="project-link">
+        Project
+    </a>
 
-        dayBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const pdf = btn.getAttribute('data-pdf');
-                iframe.src = pdf;
-                modal.style.display = 'flex';
-            });
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-            iframe.src = '';
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                iframe.src = '';
-            }
-        });
-    </script>
+</div>
 
 </body>
 </html>
